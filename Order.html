@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order form</title>
+    
+    <link rel="stylesheet" href="CSS_FILES/Orderstyle.css" />
+    <script src="JS_Files/orderScript.js"></script>
+
+  </head>
+  <body>
+    <div id="container">
+    <ul id="menu">
+      <li><a href="home.html">Home</a>
+      </li>
+      <li><a href="#">Menu</a>
+        <ul>
+          <li><a href="#">Veg</a></li>
+          <li><a href="#">Non-Veg</a></li>
+          <li><a href="#">Veg Curries</a></li>
+          <li><a href="#">Non Veg Curries</a></li>
+          <li><a href="#">Sweets</a></li>
+          <li><a href="#">Snacks</a></li>
+      </ul>
+  </li>
+  <li><a href="Services.html">Services</a>
+</li>
+<li><a href="#">Contact Us</a>
+    <ul>
+      <li><a href="Contact.html">Raghavendra</a></li>
+      <li><a href="Contact.html ">Manoj</a></li>
+  </ul>
+</li>
+<li><a href="About.html">About</a>
+</li>
+<li><a href="#">Support</a></li>
+<li><a href="Order.html" target="_blank">Order Now</a></li>
+</ul>
+</div>
+    <div class="main-block">
+      <h1>Order Form</h1>
+      <form action="Home.html">
+        <div class="info">
+          <input class="fname" type="text" name="name" placeholder="Full name">
+          <input type="text" name="name" placeholder="Email">
+          <input type="text" name="name" placeholder="Phone number">
+          <input type="text" name="name" onfocus="(this.type='date')" placeholder="Today's date in (DD/MM/YY)">
+          
+          <input type="text" name="name" onfocus="(this.type='date')" placeholder="Order due date in (DD/MM/YY)">
+          <input type="text" name="name" onfocus="(this.type='date')" placeholder="Date of event in (DD/MM/YY)">
+          <input type="text" name="name" placeholder="Time of event in HH:MM">
+          <input type="text" name="name" placeholder="Event location">
+          <input type="text" name="name" placeholder="Type of event">
+          <input type="text" name="name" placeholder="Must for order">
+          <select>
+            <option value="number" disabled selected>Level of Spice
+            <option value="10">Low</option>
+            <option value="20">Moderate</option>
+            <option value="30">High</option>
+          </select>
+          <select>
+            <option value="number" disabled selected>Type of Order</option>
+            <option value="10">Veg</option>
+            <option value="20">Non-Veg</option>
+            <option value="30">Mix of Veg & Non-Veg</option>
+            <option value="40">Snacks</option>
+          </select>
+          <select>
+            <option value="number" disabled selected>Number of guests</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+          </select>
+          <select>
+            <option value="time" disabled selected>Pick up time</option>
+            <option value="8">8:00am</option>
+            <option value="9">9:00am</option>
+            <option value="10">10:00am</option>
+            <option value="12">12:00pm</option>
+            <option value="1">1:00pm</option>
+            <option value="3">3:00pm</option>
+            <option value="6">6:00pm</option>
+            <option value="7">7:00pm</option>
+          </select>
+        </div>
+        <h3>Delivery Metod</h3>
+        <div class="metod">
+          <div> 
+            <input type="radio" value="none" id="radioOne" name="metod" checked/>
+            <label for="radioOne" class="radio">For pick up</label>
+          </div>
+          <div> 
+            <input type="radio" value="none" id="radioTwo" name="metod" />
+            <label for="radioTwo" class="radio">Catering</label>
+          </div>
+          <div>
+            <input type="radio" value="none" id="radioThree" name="metod" />
+            <label for="radioThree" class="radio">For delivery</label>
+          </div>
+        </div>
+        <button onclick="showMessage()" class="button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
