@@ -1,7 +1,26 @@
 <html>
 <head>
-	
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="CSS_FILES/Aboutstyle.css" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
 
 </head>
 
@@ -13,11 +32,9 @@
       <li><a href="#">Menu</a>
         <ul>
           <li><a href="#">Veg</a></li>
-          <li><a href="#">Non-Veg</a></li>
+          <li><a href="NonVeg.html">Non-Veg</a></li>
           <li><a href="#">Veg Curries</a></li>
           <li><a href="#">Non Veg Curries</a></li>
-          <li><a href="#">Sweets</a></li>
-          <li><a href="#">Snacks</a></li>
       </ul>
   </li>
   <li><a href="Services.html">Services</a>
@@ -42,6 +59,11 @@
 
     So, today no matter what take a moment to appreciate the food you eat. Remember to show it gratitude.
 </p>
-
+<div class="column">
+    <div style="height: 0; padding-bottom: calc(56.25%); position:relative; width: 100%;"><iframe allow="autoplay; gyroscope;" allowfullscreen height="100%" referrerpolicy="strict-origin" src="https://www.kapwing.com/e/633c8cde756f07006ed4a05c?autoplay=true" style="border:0; height:100%; left:0; overflow:hidden; position:absolute; top:0; width:100%" title="Embedded content made on Kapwing" width="100%"></iframe></div>
+  </div>
+  <div class="column">
+    <img src="Images/Aboutbcg.png" alt="AboutVideo" style="width:100%">
+  </div>
 </body>
 </html>
