@@ -1,7 +1,7 @@
 function validateFirstName(){
     var fn=document.getElementsByClassName('fname')[0].value;
     let final = new Boolean(true);
-    const stringRegex = new RegExp('^[A-Z][a-z]*');
+    var regname = /^[A-Za-z]{1,}$/
                 if(fn == ""){
                     document.getElementsByClassName('fname')[0].style.borderColor = "red";
                     alert('Please Enter First Name');
@@ -9,7 +9,7 @@ function validateFirstName(){
     }else{
         document.getElementsByClassName('fname')[0].style.borderColor = "green";
     }
-    if (/^[0-9]+$/.test(document.getElementsByClassName("fname")[0].value)) {
+    if (!(regname.test(document.getElementsByClassName("fname")[0].value))) {
         document.getElementsByClassName('fname')[0].style.borderColor = "red";
         alert("First Name Contains Numbers!");
         final = false;
@@ -22,7 +22,7 @@ function validateFirstName(){
 function validateLastName(){
     var ln=document.getElementsByClassName('lname')[0].value;
     let final = new Boolean(true);
-    const stringRegex = new RegExp('^[A-Z][a-z]*');
+    var regname = /^[A-Za-z]{1,}$/
                 if(ln == ""){
                     document.getElementsByClassName('lname')[0].style.borderColor = "red";
                     alert('Please Enter Last Name');
@@ -30,7 +30,7 @@ function validateLastName(){
     }else if(final){
         document.getElementsByClassName('lname')[0].style.borderColor = "green";
     }
-    if (/^[0-9]+$/.test(document.getElementsByClassName("lname")[0].value)) {
+    if (!(regname.test(document.getElementsByClassName("lname")[0].value))) {
         document.getElementsByClassName('lname')[0].style.borderColor = "red";
         alert("Last Name Contains Numbers!");
         final = false;
