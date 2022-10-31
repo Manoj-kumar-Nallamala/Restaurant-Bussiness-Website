@@ -137,10 +137,9 @@ body {
 html, body {
       height: 100%;
       }
-      body, input, select { 
+      body, input, textarea, select{ 
       padding: 0;
       margin: 0;
-      outline: none;
       font-family: Roboto, Arial, sans-serif;
       font-size: 16px;
       color: #eee;
@@ -164,7 +163,7 @@ html, body {
       align-items: center;
       width: 100%; 
       min-height: 100%;
-      background: url("/uploads/media/default/0001/01/e7a97bd9b2d25886cc7b9115de83b6b28b73b90b.jpeg") no-repeat center;
+     /* background: url("/uploads/media/default/0001/01/e7a97bd9b2d25886cc7b9115de83b6b28b73b90b.jpeg") no-repeat center;*/
       background-size: cover;
       }
       form {
@@ -173,19 +172,25 @@ html, body {
       margin-bottom: 20px;
       background: rgba(0, 0, 0, 0.9);
       }
-      input, select {
+      input, textarea,select {
       padding: 5px;
       margin-bottom: 20px;
       background: transparent;
-      border: none;
-      border-bottom: 1px solid #eee;
+      
+      border: 1px solid #eee;
+      border-color: 1px solid #eee;
+      }
+      textarea::placeholder {
+      color: #eee;
       }
       input::placeholder {
       color: #eee;
       }
+      o
       option {
       background: black; 
       border: none;
+
       }
       .metod {
       display: flex; 
@@ -193,6 +198,12 @@ html, body {
       input[type=radio] {
       display: none;
       }
+      input[type=checkbox] {
+      display: inline-grid;
+      }
+      
+      
+      
       label.radio {
       position: relative;
       display: inline-block;
@@ -245,7 +256,7 @@ html, body {
       flex-flow: row wrap;
       justify-content: space-between;
       }
-      input {
+      input,textarea {
       width: 46%;
       }
       input.fname {
@@ -254,4 +265,8 @@ html, body {
       select {
       width: 48%;
       }
+      #dropdownHolder,#dropdown1,#dropdown2,#dropdown3{
+        width: 100%;
       }
+      }
+      

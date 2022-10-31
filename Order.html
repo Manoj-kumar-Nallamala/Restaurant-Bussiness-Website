@@ -5,6 +5,18 @@
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="CSS_FILES/Orderstyle.css" />
+    <style type="text/css">
+      #CheckBox,#dropdownHolder,#dropdown1,#dropdown2,#dropdown3 {
+      
+      position: relative;
+      display: inline-block;
+      margin-right: 50px;
+      
+      cursor: pointer;
+    }
+  </style> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
     <script src="JS_Files/orderScript.js"></script>
 
   </head>
@@ -37,19 +49,20 @@
 </div>
     <div class="main-block">
       <h1>Order Form</h1>
-      <form action="Home.html">
+      <form action="#"  method="POST">
         <div class="info">
-          <input class="fname" type="text" name="name" placeholder="Full name">
-          <input type="text" name="name" placeholder="Email">
-          <input type="text" name="name" placeholder="Phone number">
-          <input type="text" name="name" onfocus="(this.type='date')" placeholder="Today's date in (DD/MM/YY)">
-          
+          <input class="fname" type="text" name="name" placeholder="First name">
+          <input class="lname" type="text" name="name" placeholder="Last name">
+          <input class="email" type="text" name="name" placeholder="Email">
+          <input class="pnum" type="text" name="name" placeholder="Phone number">
+          <input class="pwd" type="password"name="password" placeholder="Password">
+
           <input type="text" name="name" onfocus="(this.type='date')" placeholder="Order due date in (DD/MM/YY)">
           <input type="text" name="name" onfocus="(this.type='date')" placeholder="Date of event in (DD/MM/YY)">
           <input type="text" name="name" placeholder="Time of event in HH:MM">
-          <input type="text" name="name" placeholder="Event location">
+          <input class="add" type="text" name="name" placeholder="Event location">
           <input type="text" name="name" placeholder="Type of event">
-          <input type="text" name="name" placeholder="Must for order">
+          <textarea class="tarea" name="name">Must for Order :  </textarea>
           <select>
             <option value="number" disabled selected>Level of Spice
             <option value="10">Low</option>
@@ -71,7 +84,38 @@
             <option value="40">40</option>
             <option value="50">50</option>
           </select>
-          <select>
+          <div>
+          <input id="CheckBox" type="checkbox" value="morning" class="other" /><label for ="check1" class="checkbox">morning</label>
+          <input id="CheckBox" type="checkbox" value="evening" class="OnCall" /><label for ="check1" class="checkbox">evening</label>
+
+<div id="dropdownHolder">
+<select id="dropdown1">
+    <option>9:00am</option>
+    <option>10:00am</option>
+    <option>11:00am</option>
+    <option>12:00pm</option>
+</select>
+
+
+<select id="dropdown2">
+    <option>3:00pm</option>
+    <option>5:00pm</option>
+    <option>7:00pm</option>
+    <option>8:00pm</option>
+</select>
+
+<select id="dropdown3">
+    <option>9:00am</option>
+    <option>10:00am</option>
+    <option>11:00am</option>
+    <option>12:00pm</option>
+    <option>3:00pm</option>
+    <option>5:00pm</option>
+    <option>7:00pm</option>
+    <option>8:00pm</option>
+</select>
+</div></div>
+         <!--  <select>
             <option value="time" disabled selected>Pick up time</option>
             <option value="8">8:00am</option>
             <option value="9">9:00am</option>
@@ -82,8 +126,9 @@
             <option value="6">6:00pm</option>
             <option value="7">7:00pm</option>
           </select>
-        </div>
-        <h3>Delivery Metod</h3>
+        </div> -->
+
+        
         <div class="metod">
           <div> 
             <input type="radio" value="none" id="radioOne" name="metod" checked/>
@@ -98,7 +143,7 @@
             <label for="radioThree" class="radio">For delivery</label>
           </div>
         </div>
-        <button onclick="showMessage()" class="button">Submit</button>
+        <button class="button" onclick="showMessage()">Submit</button>
       </form>
     </div>
   </body>
